@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body 
+ 
+
+onscroll="scrolling()">
+<div class="ani">
+    <div class="bubbles">
+        <span style="--i:11;"></span>
+        <span style="--i:12;"></span>
+        <span style="--i:24;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:14;"></span>
+        <span style="--i:23;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:19;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:22;"></span>
+        <span style="--i:25;"></span>
+        <span style="--i:18;"></span>
+        <span style="--i:21;"></span>
+        <span style="--i:15;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:26;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:28;"></span>
+    </div>
+</div>
+
+<div id="progressbar" >
+    <div id="scrollpath"></div>
+</div>
+
+    <section id="uno"> 
+       
+        <h1 class="tu">Reloj Vital</h1> 
+
+        <img id="konga" src="imgss/image.png" alt="">           
+
+
+        <svg  version="1.1" id="vector" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        viewBox="0 0 595.28 841.89" style="enable-background:new 0 0 595.28 841.89;" xml:space="preserve"> 
+        <path id="trazo" d="M283,0l28,82l-39,37l50,40l9-24l-59,24c0,0,33,62,41,62s23-4,18-13s-12,52-12,52l-38,6c0,0,20,100,45,93
+            s27-25,27-25l-71,13l43,109l-37,51l35,20l-57,6l14-76l46,26c0,0-75,99-60,130s64-6,64-6s-14.72,101-32.36,115S342,781,342,781l11-42
+            l-80,19l52,88"/></svg>
+
+           
+
+
+    </section>
+
+    <section id="dos">
+        <p>uno debe aprovechar el momento y concentrarse en el presente para disfrutar lo que la vida tiene para ofrecer</p>
+        <li>Artista: jaze</li>
+        <li>albun: Pinta Nomá'
+        </li>
+        <li>Fecha de lanzamiento: 2020
+        </li>
+        <li>Género: Freestyle
+        </li>
+    </section>
+        
+
+    
+
+    <section id="vam" >
+
+        <iframe id="audi" style="border-radius:12px" src="https://open.spotify.com/embed/track/2Z21et2842A9rNrsNKHPc1?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>       
+
+    </section>
+
+
+    <div id="artista">
+        <section class="una">
+            
+            <h1>
+                jaze
+            </h1>
+            <p>Juan Carlos Iwasaki La Puente, conocido artísticamente como Jaze, es un rapero peruano.​​ Fue campeón de la Red Bull Batalla de los Gallos Perú 2018 y la God Level Internacional 2019, título que compartió con Nekroos y Choque.​​ </p>
+
+            <li>Nacimiento: 8 de diciembre de 1999 (edad 24 años), Lima, Perú</li>
+            <li>Género: Hip-hop/rap
+            </li>
+            <li>Padres: Gustavo Iwasaki Cauti; Marilú la Puente
+            </li>
+            <li>Años activo: desde 2015
+            </li>
+            <li>Seudónimo: Jaze; Toy Lokazo; MC Mochila; Juanca; Iwa
+            </li>
+            <img class="ja" src="imgss/Jaze.jpg" alt="">
+
+        </section>
+
+        <section class="otra">
+            <h1>estrofa que mas le gusto al publico</h1>
+            <p>La vida no se me escapa de las manos <br>
+                Disfruta lo que pase y piensa en el presente <br>
+                Yo sé que en su momento llegará mi turno de irme <br>
+                Descansar, despedirme de acá <br>
+                Pero me recordarán porque no pensé <br>
+                En eso y le di prioridad a mi tiempo <br>
+                Disfrutándolo, gozándolo <br>
+                No pensando en que avanza sin parar y que mi reloj vital se detendrá <br>
+                Antes de que eso pase tengo que aprovechar  </p>
+
+            <img class="jaz" src="imgss/dsc3230.jpg" alt="">
+
+
+        </section>
+    </div>
+
+    <script>
+        var trazo= document.getElementById("trazo");
+        var trazototal= trazo.getTotalLength("");
+        console.log(trazototal);
+
+        function scrolling (){
+            var scrollporcentaje=(document.body.scrollTop + document.documentElement.scrollTop)/(document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            var final=-(scrollporcentaje)*trazototal
+            trazo.style.strokeDasharray= trazototal;
+            trazo.style.strokeDashoffset=final;
+            trazo.style.strokeDashoffset=final-trazototal;
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+*{padding: 0;
+margin: 0;
+box-sizing: border-box;}
+
+@font-face {font-family: mifuete;
+    src: url(fonts/Lato-Regular.ttf) format(woff2);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {font-family: gruesa;
+    src: url(fonts/Seven\ deadly\ sins.ttf);
+    font-weight: bold;
+    font-style: bold;
+}
+
+#uno img{
+    display: flex;
+    align-items: center;
+width: 40%;
+height: 40%;}
+
+#uno{ display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+
+p { color: #5BC0BE 
+
+    ;}
+
+li{color: #5BC0BE ;
+    list-style-type: none;
+
+}
+
+#dos p{ margin-top: 70px;}
+#trazo{
+
+    fill: none;
+    stroke: aqua;
+    stroke-width: 10px;
+    stroke-dasharray: 50px;
+    z-index: -5;     
+}
+
+#vector{position: absolute;
+    top: -200px;
+    z-index: -6;
+}
+
+.tu{display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+    font-size: 100px;
+    font-family: gruesa;
+    font-weight: bold;
+    letter-spacing: 15px;
+    margin-top: 30px;
+    
+}
+h1{
+    font-family: gruesa;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+#artista .una h1{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+#artista .otra h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+    #artista .otra p{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    }
+
+#uno p{
+    margin-top: 50px;
+}
+
+#artista img{
+    border-radius: 5%;
+    margin-top: 20px;
+}
+
+#dos li{line-height: 30px; 
+    margin-top: 10px;
+}
+    
+#artista .una li{line-height: 30px; 
+    margin-top: 10px;}
+
+#artista .otra p{line-height: 30px; 
+        margin-top: 10px;}
+
+.tu ::first-letter{
+    text-transform: uppercase;
+}
+
+#dos{ display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#vam{display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;} 
+
+iframe{width: 50%;
+height: 50%;
+color: #6FFFE9;
+margin-top: 80px;
+
+}
+
+#audi{ display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;}
+
+body {
+background: #0B132B;
+font-family: mifuete, lato;
+font-weight: normal;
+}
+
+body ::first-letter {
+    text-transform: uppercase;
+}
+
+.ani{position: fixed;
+width: 100%;
+height: 100%;
+overflow: hidden;
+z-index: -1;
+}
+
+.bubbles{position: relative;
+display: flex;}
+
+.bubbles span {position: relative;
+    
+height: 70px;
+width: 70px;
+background: #4fc3dc;
+margin: 0 4px;
+border-radius: 50%;
+box-shadow: 0 0 0 10px #4fc3dc44,
+0 0 50px #4fc3dc,
+0 0 100px #4fc3dc;
+animation: animate 15s  linear infinite;
+animation-duration: calc(250s / var(--i));}
+
+.bubbles span:nth-child(even){
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544,
+    0 0 50px #ff2d75, 
+    0 0 100px #ff2d75;
+
+}
+
+@keyframes animate {
+    0%{ 
+        transform: translateY(100vh) scale(0);}
+
+    100%{
+        transform: translateY(-10vh) scale(0.5);
+    }
+
+
+}
+
+#artista{display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 1200px;
+    gap: 30px;
+}
+
+#artista .ja{max-width: 100%;
+    height: auto;
+    display: block;}
+
+#artista section{
+    flex: 1;
+    margin: 0 1;
+    padding: 20px;
+    background-color: #1C2541;
+    color: #0B132B;
+    border-radius: 5%;
+    box-shadow: 0 4px 8px rgba(red, green, blue, alpha);
+    overflow: hidden;
+
+}
+
+.otra .jaz {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+@media (max-width: 600px) {
+    #dos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #dos p{
+        margin: 10px 10px 10px 10px;
+    }
+
+    #uno img{
+        width: 60%;
+        height: auto;
+    }
+
+    iframe{
+        width: 90%;
+        height: 60%;
+    }
+
+    #artista{
+        display: block;
+    }
+
+    #artista .otra{
+        margin-top: 50px;
+
+    }
+
+    #vector{position: fixed;
+
+}
+
+}
